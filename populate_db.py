@@ -68,7 +68,7 @@ for row in data:
 html += "</table>"
 
 # Execute the query for question3
-cursor.execute(schema_string1)
+cursor.execute(schema_string3)
 
 # Fetch the data
 data = cursor.fetchall()
@@ -85,7 +85,7 @@ for row in data:
 html += "</table>"
 
 # Execute the query for question4
-cursor.execute(schema_string1)
+cursor.execute(schema_string4)
 
 # Fetch the data
 data = cursor.fetchall()
@@ -98,6 +98,56 @@ html += "</tr>\n"
 for row in data:
     html += "<tr>\n"
     html += "<td>{}</td>\n".format(row[0])
+    html += "</tr>\n"
+html += "</table>"
+
+
+# Execute the query for question5
+cursor.execute(schema_string5)
+
+# Fetch the data
+data = cursor.fetchall()
+
+# Create an HTML table for question5
+html = "<table>\n"
+html += "<tr>\n"
+html += "<th>column_1</th>\n"
+html += "<th>column_2</th>\n"
+html += "<th>column_3</th>\n"
+html += "</tr>\n"
+for row in data:
+    html += "<tr>\n"
+    html += "<td>{}</td>\n".format(row[0])
+    html += "<td>{}</td>\n".format(row[1])
+    html += "<td>{}</td>\n".format(row[2])
+    html += "</tr>\n"
+html += "</table>"
+
+
+# Execute the query for question6
+cursor.execute(schema_string6)
+
+# Fetch the data
+data = cursor.fetchall()
+
+# Create an HTML table for question6
+html = "<table>\n"
+html += "<tr>\n"
+html += "<th>column_1</th>\n"
+html += "<th>column_2</th>\n"
+html += "<th>column_3</th>\n"
+html += "<th>column_4</th>\n"
+html += "<th>column_5</th>\n"
+html += "<th>column_6</th>\n"
+html += "</tr>\n"
+for row in data:
+    html += "<tr>\n"
+    html += "<td>{}</td>\n".format(row[0])
+    html += "<td>{}</td>\n".format(row[1])
+    html += "<td>{}</td>\n".format(row[2])
+    html += "<td>{}</td>\n".format(row[3])
+    html += "<td>{}</td>\n".format(row[4])
+    html += "<td>{}</td>\n".format(row[5])
     html += "</tr>\n"
 html += "</table>"
 

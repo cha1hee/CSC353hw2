@@ -11,18 +11,10 @@ connection = mysql.connector.connect(
 # Get the cursor object
 cursor = connection.cursor()
 f = open("schema_and_data.sql", "r")
-f1 = open("question1.sql", "r")
 f2 = open("question2.sql", "r")
-f3 = open("question3.sql", "r")
-f4 = open("question4.sql", "r")
-f5 = open("question5.sql", "r")
 f6 = open("question6.sql", "r")
 schema_string = f.read()
-schema_string1 = f1.read()
 schema_string2 = f2.read()
-schema_string3 = f3.read()
-schema_string4 = f4.read()
-schema_string5 = f5.read()
 schema_string6 = f6.read()
 
 # Execute the query for question2
@@ -81,9 +73,5 @@ cursor.close()
 connection.close()
 
 # Print the HTML table
-print(html1)
 print(html2)
-print(html3)
-print(html4)
-print(html5)
 print(html6)

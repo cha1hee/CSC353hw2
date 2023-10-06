@@ -60,7 +60,7 @@ for row in data:
     html6 += "<tr>\n"
     html6 += "<td>{}</td>\n".format(row[0])
     html6 += "<td>{}</td>\n".format(row[1])
-    html6 += "<td>{}</td>\n".format(row[2])
+    html6 += "<td class=party-{}>{}</td>\n".format(row[2], row[2])
     html6 += "<td>{}</td>\n".format(row[3])
     html6 += "<td>{}</td>\n".format(row[4])
     html6 += "<td>{}</td>\n".format(row[5])

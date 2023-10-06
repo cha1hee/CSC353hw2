@@ -10,5 +10,5 @@ GROUP BY senator.id;
 
 -- Question Answer
 
--- Kelly Loeffler and Kamala Harris were absent the most – they only participated in 2 votes.
--- This is because they were not re-elected during the 2020 election, so their term ended in January 2021.
+-- Mike Rounds was most absent due to illness of his wife.
+-- Dan Sullivan was next for the most absences due to a family death.

@@ -31,12 +31,17 @@ html2 += "<th>Last Name</th>\n"
 html2 += "<th>First Name</th>\n"
 html2 += "<th>Absences</th>\n"
 html2 += "</tr>\n"
+current_row = 1
 for row in data:
-    html2 += "<tr>\n"
+    if (current_row % 2) == 0:
+        html2 += "<tr class='q2-even-row'>\n"
+    else:
+        html2 += "<tr class='q2-odd-row'>\n"
     html2 += "<td>{}</td>\n".format(row[0])
     html2 += "<td>{}</td>\n".format(row[1])
     html2 += "<td>{}</td>\n".format(row[2])
     html2 += "</tr>\n"
+    current_row += 1
 html2 += "</table>"
 
 
@@ -47,25 +52,26 @@ cursor.execute(schema_string6)
 data = cursor.fetchall()
 
 # Create an HTML table for question6
-html6 = "<table>\n"
-html6 += "<tr>\n"
-html6 += "<th>Last Name</th>\n"
-html6 += "<th>First Name</th>\n"
-html6 += "<th>Political Party</th>\n"
-html6 += "<th>Number of Disagreements</th>\n"
-html6 += "<th>Number of Agreements</th>\n"
-html6 += "<th>Agreement Index</th>\n"
-html6 += "</tr>\n"
-for row in data:
-    html6 += "<tr>\n"
-    html6 += "<td>{}</td>\n".format(row[0])
-    html6 += "<td>{}</td>\n".format(row[1])
-    html6 += "<td class=party-{}>{}</td>\n".format(row[2], row[2])
-    html6 += "<td>{}</td>\n".format(row[3])
-    html6 += "<td>{}</td>\n".format(row[4])
-    html6 += "<td>{}</td>\n".format(row[5])
-    html6 += "</tr>\n"
-html6 += "</table>"
+# html6 = "<table>\n"
+# html6 += "<tr>\n"
+# html6 += "<th>Last Name</th>\n"
+# html6 += "<th>First Name</th>\n"
+# html6 += "<th>Political Party</th>\n"
+# html6 += "<th>Number of Disagreements</th>\n"
+# html6 += "<th>Number of Agreements</th>\n"
+# html6 += "<th>Agreement Index</th>\n"
+# html6 += "</tr>\n"
+# for row in data:
+#     party_class = "party-" + row[2]
+#     html6 += "<tr class='{}'>\n".format(party_class)
+#     html6 += "<td>{}</td>\n".format(row[0])
+#     html6 += "<td>{}</td>\n".format(row[1])
+#     html6 += "<td>{}</td>\n".format(row[2])
+#     html6 += "<td>{}</td>\n".format(row[3])
+#     html6 += "<td>{}</td>\n".format(row[4])
+#     html6 += "<td>{}</td>\n".format(row[5])
+#     html6 += "</tr>\n"
+# html6 += "</table>"
 
 
 # Close the cursor and connection

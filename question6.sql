@@ -29,3 +29,13 @@ SELECT sen_y_lastname, sen_y_firstname, party, number_of_disagreements, number_o
 					ON sen_y_id = senator.id
 		) AS agreement_table
 ORDER BY agreement_index;
+
+-- Question Answer
+
+-- There is a clear bipartisan division. When comparing agreement index against Ted Cruz, a Republican senator, 
+-- all Republicans had a positive agreement index value
+-- (except Kelly Loeffler, who voted in disagreement twice out of the 2 votes she participated in.) 
+-- Conversely, all Democratcs had a negative agreement index value. 
+
+-- This division is visually indicated in our web page, as Democrats have a light blue row color
+-- and Republicans have a light red row color.

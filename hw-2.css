@@ -14,3 +14,15 @@ th, td {
     border-collapse: collapse;
 }
 
+.party-R {
+    background-color: lightcoral;
+}
+
+.party-D {
+    background-color: lightblue;
+}
+
+.q2-odd-row {
+    background-color: lightgray;
+}
+

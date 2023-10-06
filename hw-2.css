@@ -2,12 +2,15 @@ h1 {
     text-align: center;
 }
 
-#question-2 {
-    width: 100%;
+table {
+    width: 70%;
+    border: 1px solid;
+    border-collapse: collapse;
 }
 
-table, th, td {
+th, td {
     text-align: left;
     border: 1px solid;
     border-collapse: collapse;
 }
+

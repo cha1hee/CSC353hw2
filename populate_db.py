@@ -27,9 +27,9 @@ data = cursor.fetchall()
 # Create an HTML table for question2
 html2 = "<table>\n"
 html2 += "<tr>\n"
-html2 += "<th>column_1</th>\n"
-html2 += "<th>column_2</th>\n"
-html2 += "<th>column_3</th>\n"
+html2 += "<th>Last Name</th>\n"
+html2 += "<th>First Name</th>\n"
+html2 += "<th>Absences</th>\n"
 html2 += "</tr>\n"
 for row in data:
     html2 += "<tr>\n"
@@ -47,25 +47,25 @@ cursor.execute(schema_string6)
 data = cursor.fetchall()
 
 # Create an HTML table for question6
-# html6 = "<table>\n"
-# html6 += "<tr>\n"
-# html6 += "<th>column_1</th>\n"
-# html6 += "<th>column_2</th>\n"
-# html6 += "<th>column_3</th>\n"
-# html6 += "<th>column_4</th>\n"
-# html6 += "<th>column_5</th>\n"
-# html6 += "<th>column_6</th>\n"
-# html6 += "</tr>\n"
-# for row in data:
-#     html6 += "<tr>\n"
-#     html6 += "<td>{}</td>\n".format(row[0])
-#     html6 += "<td>{}</td>\n".format(row[1])
-#     html6 += "<td>{}</td>\n".format(row[2])
-#     html6 += "<td>{}</td>\n".format(row[3])
-#     html6 += "<td>{}</td>\n".format(row[4])
-#     html6 += "<td>{}</td>\n".format(row[5])
-#     html6 += "</tr>\n"
-# html6 += "</table>"
+html6 = "<table>\n"
+html6 += "<tr>\n"
+html6 += "<th>Last Name</th>\n"
+html6 += "<th>First Name</th>\n"
+html6 += "<th>Political Party</th>\n"
+html6 += "<th>Number of Disagreements</th>\n"
+html6 += "<th>Number of Agreements</th>\n"
+html6 += "<th>Agreement Index</th>\n"
+html6 += "</tr>\n"
+for row in data:
+    html6 += "<tr>\n"
+    html6 += "<td>{}</td>\n".format(row[0])
+    html6 += "<td>{}</td>\n".format(row[1])
+    html6 += "<td>{}</td>\n".format(row[2])
+    html6 += "<td>{}</td>\n".format(row[3])
+    html6 += "<td>{}</td>\n".format(row[4])
+    html6 += "<td>{}</td>\n".format(row[5])
+    html6 += "</tr>\n"
+html6 += "</table>"
 
 
 # Close the cursor and connection
